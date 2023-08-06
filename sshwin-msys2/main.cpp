@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
 	if (g_SingleInstanceObj.IsAnotherInstanceRunning())
 	{
 		if (bReload ||
-			MessageBoxA(NULL, "Win ssh-agent<->Msys2 is running\nOK to stop, Cancel to keep.", "SSHWIN-MSYS2 by lucidusdev@github", MB_OKCANCEL | MB_ICONINFORMATION) == IDOK)
+			MessageBoxA(NULL, "ssh-agent<->MSYS2 is running\nOK to stop, Cancel to keep.", "SSHWIN-MSYS2 by lucidusdev@github", MB_OKCANCEL | MB_ICONINFORMATION) == IDOK)
 		{
 		//_MessageBoxOK(L"Another instance is running, exiting...");
 			HWND h = FindWindow(WKCLASS_MAIN, NULL);

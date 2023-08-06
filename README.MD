@@ -4,7 +4,15 @@
 
 This is a simple ssh-agent proxy so MSYS2's ssh/git can use Windows native OpenSSH, [or latest Pageant](https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/pageant-named-pipe.html) as its ssh-agent. And since it exposes named pipe as a TCP port it also works on WSL2 with some extra work.
 
+### Background
 
+------
+- ssh-agent is used to store the credential and decrypt the private ssh key when necessary, so you DON'T need it(and this program) for an unencrypted ssh key setup.
+
+- Why use Windows ssh-agent vs pageant(or others)?
+  While Windows ssh-agent isn't the safest, it's very convenient as it doesn't require repeat password input after initial setup. Also it has a very small memory print(less than 1MB). 
+
+  
 
 ### For MSYS2 & Git-Bash
 
